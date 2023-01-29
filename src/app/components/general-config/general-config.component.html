@@ -1,0 +1,40 @@
+
+    <div class="config-container">
+
+        <div class="config-container__options">
+
+            <p class="config-container__title">General Configuration</p>
+
+            <div class="config-container__option"> Show Time:
+                <app-radio 
+                    name="radioTime"
+                    [options]="optionsTime"
+                    [value]="selectedShowTime" 
+                    (newItemEvent) = "radioTimeClick()"
+                    [visible]="visible"
+                    (dec)="change()"
+                ></app-radio>
+            </div>
+
+            <div class="config-container__option">Type:
+                <app-radio
+                    name = "radioType"
+                    [options]="optionsType"
+                    [value]="selectedType"
+                    (newItemEvent)= "radioTypeClick()"
+                
+                ></app-radio>
+            </div>
+
+            <div class="config-container__option">Mode:
+                <app-radio
+                    name = "radioMode"
+                    [options]="optionsMode"
+                    [value] = "selectedMode"
+                    (newItemEvent) = "radioModeClick()"
+                
+                ></app-radio>
+            </div>
+
+        </div>
+    </div>

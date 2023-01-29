@@ -1,0 +1,8 @@
+body {
+    background-color: aliceblue;
+    user-select: none;
+}
+
+.dark {
+    background-color: rgb(185, 150, 150);
+  }

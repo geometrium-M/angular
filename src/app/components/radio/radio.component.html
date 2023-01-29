@@ -1,0 +1,16 @@
+<div class="radio-wrapper">
+     
+    
+    <div *ngFor="let option of options ">
+        <input
+        [name]="name"
+        type="radio" 
+        [checked]="value === option"
+        (change)="radioClick()"
+    />
+    
+        <label>{{option}}</label>
+    </div>
+</div>
+
+

@@ -1,0 +1,47 @@
+<div class="wrapper">
+    <app-input-value class="input"
+
+    [currentDateString]="dateIntervalTitle"
+    (click)="visible = !visible"
+    
+></app-input-value>
+
+<div  *ngIf="visible" class="calendar-info">
+    <app-side-bar  *ngIf="showTypeMode"
+    [showMonthsType]="showTypeDayMonth"
+    [currentDate]="dateService.date.value"
+    (updateDateInterval)="updateDate($event)"
+
+    [selectedOption]="selectedOption"
+    (updateSelectedOption)="updateSelectedOption($event)"
+    ></app-side-bar>
+    <app-calendars-wrapper
+    [calendarFromShowingDate]="calendarFrom"
+    [calendarToShowingDate]="dateService.date.value"
+
+    [dateInterval]="DateIntervalService.dateInterval"
+
+    (changeNext)="moveNext()"
+    (changeBack)="moveBack()"
+
+    [datesTo]="datesTo"
+    [datesFrom]="datesFrom"
+
+    [showTypeMonth]="showTypeDayMonth"
+    (updateDate)="updateDate($event)"
+
+    (updateDateInterval)="updateDate($event)"
+  
+ 
+></app-calendars-wrapper>
+</div>
+
+
+</div>
+
+
+
+
+
+
+

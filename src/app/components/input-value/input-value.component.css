@@ -1,0 +1,8 @@
+.date-container__input {
+    min-height: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    width: 200px;
+    background-color: white;
+    font-size: 14px;
+}

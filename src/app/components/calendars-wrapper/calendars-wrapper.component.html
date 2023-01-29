@@ -1,0 +1,55 @@
+<div class="calendar-container__cards" *ngIf="!showTypeMonth; else monthCards ">
+
+    
+        <app-date-calendar
+            [showingDate]="calendarFromShowingDate"
+            [dateInterval]="dateInterval"
+            [leftArrow]="true"
+            (moveBack)="moveBack()"
+            [days]="datesFrom"
+            (updateInterval)="updateSelectedDate($event)"
+            (handleMouseDown)="handleMouseDown($event)"
+            (handleMouseEnter)="handleMouseEnterDay($event)"
+        ></app-date-calendar>
+
+    
+        <app-date-calendar
+            [showingDate]="calendarToShowingDate"
+            [dateInterval]="dateInterval"
+            [rightArrow]="true"
+            (moveNext)="moveNext()"
+            (updateInterval)="updateSelectedDate($event)"
+            [days]="datesTo"
+            (handleMouseDown)="handleMouseDown($event)"
+            (handleMouseEnter)="handleMouseEnterDay($event)"
+        ></app-date-calendar>
+    
+</div>
+        <ng-template #monthCards>
+            <div class="calendar-container__cards">
+                <app-month-calendar
+                [showingDate]="calendarFromShowingDate"
+                [dateInterval]="dateInterval"
+                [leftArrow]="true"
+                (moveBack)="moveBack()"
+                (updateInterval)="updateSelectedDate($event)"
+                (handleMouseDown)="handleMouseDown($event)"
+                (handleMouseEnter)="handleMouseEnterMonth($event)"
+            ></app-month-calendar>
+
+            <app-month-calendar
+                [showingDate]="calendarToShowingDate"
+                [dateInterval]="dateInterval"
+                [rightArrow]="true"
+                (moveNext)="moveNext()"
+                (updateInterval)="updateSelectedDate($event)"
+                (handleMouseDown)="handleMouseDown($event)"
+                (handleMouseEnter)="handleMouseEnterMonth($event)"
+            ></app-month-calendar>
+            </div>
+           
+        </ng-template>
+
+
+
+

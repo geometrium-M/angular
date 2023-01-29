@@ -1,0 +1,43 @@
+
+
+<div class="calendar-sideBar">
+    <div class="calendar-sideBar__header">SELECT BY</div>
+
+    <div  *ngIf="!showMonthsType; else month">
+        <ul>
+            <li *ngFor="let dayOption of dayOptions"
+            (click)="handleOptionClick(dayOption.key)"
+            [ngClass]="getOptionClasses(dayOption.key)"
+            >{{dayOption.value}}</li>
+        </ul>
+    </div>
+
+   
+        
+    
+        
+    <ng-template  #month >
+        <ul>
+            <li *ngFor="let monthOption of monthOptions"
+            (click)="handleOptionClick(monthOption.key)"
+            [ngClass]="getOptionClasses(monthOption.key)"
+           
+            >{{monthOption.value}}</li>
+        </ul>
+    </ng-template>
+</div>
+
+   
+        
+    
+  
+
+
+  
+
+   
+       
+    
+
+  
+ 

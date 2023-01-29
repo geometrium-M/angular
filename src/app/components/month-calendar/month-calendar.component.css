@@ -1,0 +1,76 @@
+.month-card {
+    position: relative;
+    margin-top: 50px;
+}
+.month-card__months {
+    display: flex ;
+    flex-wrap: wrap;
+    width: 250px;
+    align-items: center;
+}
+
+.month-card__month {
+
+    border: 1px solid rgb(211, 201, 201);
+    cursor: pointer;
+    width: 25px;
+    font-size: 14px;
+    margin: 0 5px;
+    margin-bottom: 15px;
+    padding: 5px 20px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.month-card__title {
+    position: absolute;
+    top: -30px;
+    left: 40%;
+}
+
+.mont-card__buttons-wrapper {
+    position: relative;
+}
+
+
+.month-card__buttons-wrapper_previous {
+
+    background-image: url(../../../assets/2.png);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    left: -25px;
+    top: -30px;
+    
+}
+
+.month-card__buttons-wrapper_next {
+
+    background-image: url(../../../assets/3.png);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    right: -25px;
+    top: -30px;
+   
+}
+
+.month-card__month_current {
+  color: blue;
+}
+
+.month-card__month_selected {
+    color: white;
+    background-color: blue;
+
+}
+
+.month-card__month_in-range {
+    background-color: rgb(189, 245, 245);
+}

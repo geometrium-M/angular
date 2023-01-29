@@ -1,0 +1,24 @@
+
+       
+
+    <div class="month-card">
+        <header class="mont-card__buttons-wrapper">
+            <button *ngIf="leftArrow" class="month-card__buttons-wrapper_previous" (click)="PreviousYear()" ></button>
+            <button *ngIf="rightArrow"  class="month-card__buttons-wrapper_next"  (click)="NextYear()"></button>
+        </header>
+
+        <div>
+            <div class="month-card__title">{{showingDate.getFullYear()}}</div> 
+            <div class="month-card__months">
+                <div *ngFor="let month of months"
+                class="month-card__month"
+                [ngClass]="getMonthClasses(getMonthIndex(month))"
+                (click)="selectMonth(getMonthIndex(month))"
+                (mousedown)="mouseDown(getMonthIndex(month))"
+                (mouseenter)="mouseEnter(getMonthIndex(month))"
+                >{{month}}</div>
+            </div>
+        </div>
+
+    </div>
+

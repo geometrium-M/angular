@@ -1,0 +1,97 @@
+
+
+    .calendar-card__item {
+        width: 230px;
+        position: relative;
+        user-select: none;
+        padding: 0 20px 40px;
+        font-size: 14px;
+    }
+
+    .calendar-card__buttons-wrapper {
+        position: relative;
+        height: 20px;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0;
+    }
+
+    .calendar-card__buttons-wrapper_previous {
+
+            background-image: url(../../../assets/2.png);
+            background-size: cover;
+            height: 20px;
+            width: 20px;
+            border: none;
+            background-color: white;
+            position: absolute;
+            left: -25px;
+            
+        }
+
+        .calendar-card__buttons-wrapper_next {
+
+            background-image: url(../../../assets/3.png);
+            background-size: cover;
+            height: 20px;
+            width: 20px;
+            border: none;
+            background-color: white;
+            position: absolute;
+            right: -25px;
+        }
+
+        .card-info__week {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            color: #1a1111;
+        }
+
+        .card-info__days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            row-gap: 10px;
+            background-color: white;
+            font-size: 12px;
+        }
+
+        .card-info__day {
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-info {
+            position: relative;
+        }
+
+        .card-info__title {
+            position: absolute;
+            left: 30%;
+            top: -15%;
+        }
+
+        .not-current-month-day {
+            color: rgb(202, 199, 199);
+        }
+
+        .current-date {
+            color: blue;
+         
+        }
+
+        .selected-date {
+            color: white;
+            background-color: blue;
+            border-radius: 100%;
+
+        }
+
+        .range-date {
+          background-color: rgb(189, 245, 245);
+        }
+    

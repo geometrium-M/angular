@@ -1,0 +1,13 @@
+.calendar-container__cards {
+    padding: 0 20px;
+    margin-top: 20px;
+    
+    width: 550px;
+    display: flex;
+    justify-content: space-around;   
+    
+}
+
+
+
+

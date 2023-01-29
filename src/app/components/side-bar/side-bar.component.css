@@ -1,0 +1,33 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.calendar-sideBar {
+    height: 100%;
+    border-right: 1px solid rgb(196, 193, 193);
+    padding-left: 10px;
+   
+}
+
+.calendar-sideBar__item {
+    width: 100px;
+    padding: 5px;
+    font-size: 14px;
+
+}
+
+.calendar-sideBar__item:hover {
+    cursor: pointer;
+    background-color: rgb(192, 154, 227);
+}
+
+.calendar-sideBar__header {
+    font-size: 14px;
+    color: rgb(188, 183, 183);
+    padding-top: 10px;
+}
+
+.calendar-sideBar__item_selected {
+    background-color: blueviolet;
+}
